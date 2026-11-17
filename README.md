@@ -5,7 +5,7 @@ Aplicação web acadêmica para consultar Pokémon pela PokéAPI, explorar seus 
 ## Integrantes
 
 - Renan Albuquerque Santos
-- [Nome do segundo integrante, se houver]
+- Matheus Soares Diniz Couto
 
 ## Funcionalidades
 
