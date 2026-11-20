@@ -16,6 +16,9 @@ export async function GET(
 		const res = await fetch(
 			`https://pokeapi.co/api/v2/pokemon?limit=${LIMIT}&offset=${LIMIT * (page - 1)}`,
 		);
+
+		if (!res.ok) throw new Error(`Erro ao obter dados de Pokemons página ${page}`);
+
 		const data: PokeApiListResponse = await res.json();
 
 		let results: PokemonSummary[] = [];

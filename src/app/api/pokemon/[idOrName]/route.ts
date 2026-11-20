@@ -17,6 +17,9 @@ export async function GET(
 	const { idOrName } = await params;
 
 	const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${idOrName}`);
+
+	if (!res.ok) throw new Error(`Erro ao obter dados de Pokemon ${idOrName}`);
+
 	const data: PokeApiResponse = await res.json();
 
 	const { id, name, height, weight, stats, types, species } = data;

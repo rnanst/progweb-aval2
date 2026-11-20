@@ -23,14 +23,14 @@ obsidianUIMode: preview
 
 ## Consulta de Pokémon e tipos
 
-- [ ] Substituir a implementação temporária de `GET /api/pokemon` em `src/app/api/pokemon/route.ts` pela consulta real à PokéAPI.
+- [x] Substituir a implementação temporária de `GET /api/pokemon` em `src/app/api/pokemon/route.ts` pela consulta real à PokéAPI.
 - [ ] Validar query strings: página inteira positiva, tipo não vazio e tamanho não superior a 20; responder `400` para valores inválidos.
-- [ ] Sem filtro, usar a listagem paginada da PokéAPI; com filtro, consultar o recurso de tipo e paginar os Pokémon daquele tipo.
+- [x] Sem filtro, usar a listagem paginada da PokéAPI; com filtro, consultar o recurso de tipo e paginar os Pokémon daquele tipo.
 - [ ] Enriquecer todos os resultados da página com número, URL da imagem e tipos, buscando detalhes concorrentemente com `Promise.all`.
-- [ ] Responder `200` com metadados de paginação e lista vazia quando não houver resultados.
+- [x] Responder `200` com metadados de paginação e lista vazia quando não houver resultados.
 - [ ] Implementar `GET /api/types` em `src/app/api/types/route.ts`, retornando somente os dados necessários para escolher um filtro.
 - [ ] Finalizar `GET /api/pokemon/[idOrName]`: validar identificador/nome e verificar a resposta da PokéAPI antes de ler o JSON.
-- [ ] No detalhe, combinar dados do Pokémon, da espécie e da cadeia evolutiva; retornar atributos, tipos e cadeia como nomes em ordem evolutiva.
+- [x] No detalhe, combinar dados do Pokémon, da espécie e da cadeia evolutiva; retornar atributos, tipos e cadeia como nomes em ordem evolutiva.
 - [ ] Tratar corretamente respostas inválidas e falhas em qualquer etapa do detalhe, sem transformar Pokémon inexistente em erro `500`.
 
 ## Banco SQLite e dados iniciais
