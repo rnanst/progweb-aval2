@@ -12,6 +12,10 @@ export async function GET(
 	const { page } = await params;
 	const LIMIT = 20;
 
+	if (isNaN(Number(page)) || Number(page) < 1) {
+		throw new Error("Valor inválido para o argumetno 'page'.");
+	}
+
 	try {
 		const res = await fetch(
 			`https://pokeapi.co/api/v2/pokemon?limit=${LIMIT}&offset=${LIMIT * (page - 1)}`,
